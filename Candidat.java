@@ -3,27 +3,27 @@ package pack;
 public class Candidat {
 	protected Facultate facultate;
 	protected Specializare specializare;
-	protected float media_admitere;
+	protected float mediaAdmitere;
 	protected String nume;
 	protected String prenume;
-	protected Examen_BAC [] examene_BAC;
+	protected ExamenBAC [] exameneBAC;
 	public Candidat(Facultate facultate, Specializare specializare, String nume, String prenume,
-			Examen_BAC[] examene_BAC) {
+			ExamenBAC[] exameneBAC) {
 		super();
 		this.facultate = facultate;
 		this.specializare = specializare;
 		this.nume = nume;
 		this.prenume = prenume;
-		this.examene_BAC = examene_BAC;
+		this.exameneBAC = exameneBAC;
 	}
 	
 public Candidat()
 {
-	this.media_admitere = -1;
+	this.mediaAdmitere = -1;
 	this.nume = "";
 	this.prenume = "";
 }
-	protected void calcul_medie_admitere()
+	protected void calculeazaMedieAdmitere()
 	{
 		
 	}
@@ -44,12 +44,12 @@ public Candidat()
 		this.specializare = specializare;
 	}
 
-	public float getMedia_admitere() {
-		return media_admitere;
+	public float getMediaAdmitere() {
+		return mediaAdmitere;
 	}
 
-	public void setMedia_admitere(float media_admitere) {
-		this.media_admitere = media_admitere;
+	public void setMedia_admitere(float mediaAdmitere) {
+		this.mediaAdmitere = mediaAdmitere;
 	}
 
 	public String getNume() {
@@ -68,12 +68,12 @@ public Candidat()
 		this.prenume = prenume;
 	}
 
-	public Examen_BAC[] getExamene_BAC() {
-		return examene_BAC;
+	public ExamenBAC[] getExameneBAC() {
+		return exameneBAC;
 	}
 
-	public void setExamene_BAC(Examen_BAC[] examene_BAC) {
-		this.examene_BAC = examene_BAC;
+	public void setExameneBAC(ExamenBAC[] exameneBAC) {
+		this.exameneBAC = exameneBAC;
 	}
 	
 }

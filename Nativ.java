@@ -2,53 +2,53 @@ package pack;
 
 public class Nativ extends Candidat {
 
-	private Examen_adm [] examene_admitere;
-	private float [] procentaj_adm;
-    private float [] procentaj_BAC;
+	private ExamenAdm [] exameneAdmitere;
+	private float [] procentajAdm;
+    private float [] procentajBAC;
 	@Override
-	public void calcul_medie_admitere() {
+	public void calculeazaMedieAdmitere() {
 		// TODO Auto-generated method stub
 		int i;
 		float nota=0;
-		for(i=0; i<this.examene_admitere.length; i++)
+		for(i=0; i<this.exameneAdmitere.length; i++)
 		{
-			nota+=this.examene_admitere[i].getNota()*this.procentaj_adm[i];
+			nota+=this.exameneAdmitere[i].getNota()*this.procentajAdm[i];
 		}
-		for(i=0; i<this.examene_BAC.length; i++)
+		for(i=0; i<this.exameneBAC.length; i++)
 		{
-			nota+=this.examene_BAC[i].getNota()*this.procentaj_BAC[i];
+			nota+=this.exameneBAC[i].getNota()*this.procentajBAC[i];
 		}
-		this.media_admitere=nota;
-		super.calcul_medie_admitere();
+		this.mediaAdmitere=nota;
+		super.calculeazaMedieAdmitere();
 	}
 public Nativ(Facultate facultate, Specializare specializare, String nume, String prenume,
-Examen_BAC[] examene_BAC, Examen_adm[] examene_admitere, float[] procentaj_adm, float[] procentaj_BAC) {
+ExamenBAC[] examene_BAC, ExamenAdm[] exameneAdmitere, float[] procentajAdm, float[] procentajBAC) {
 		super(facultate, specializare, nume, prenume, examene_BAC);
-		this.examene_admitere = examene_admitere;
-		this.procentaj_adm = procentaj_adm;
-		this.procentaj_BAC = procentaj_BAC;
+		this.exameneAdmitere = exameneAdmitere;
+		this.procentajAdm = procentajAdm;
+		this.procentajBAC = procentajBAC;
 	}
 public Nativ()
 {
 	
 }
-	public Examen_adm[] getExamene_admitere() {
-		return examene_admitere;
+	public ExamenAdm[] getExameneAdmitere() {
+		return exameneAdmitere;
 	}
-	public void setExamene_admitere(Examen_adm[] examene_admitere) {
-		this.examene_admitere = examene_admitere;
+	public void setExameneAdmitere(ExamenAdm[] exameneAdmitere) {
+		this.exameneAdmitere = exameneAdmitere;
 	}
-	public float[] getProcentaj_adm() {
-		return procentaj_adm;
+	public float[] getProcentajAdm() {
+		return procentajAdm;
 	}
-	public void setProcentaj_adm(float[] procentaj_adm) {
-		this.procentaj_adm = procentaj_adm;
+	public void setProcentajAdm(float[] procentajAdm) {
+		this.procentajAdm = procentajAdm;
 	}
-	public float[] getProcentaj_BAC() {
-		return procentaj_BAC;
+	public float[] getProcentajBAC() {
+		return procentajBAC;
 	}
-	public void setProcentaj_BAC(float[] procentaj_BAC) {
-		this.procentaj_BAC = procentaj_BAC;
+	public void setProcentajBAC(float[] procentajBAC) {
+		this.procentajBAC = procentajBAC;
 	}
 	
 }

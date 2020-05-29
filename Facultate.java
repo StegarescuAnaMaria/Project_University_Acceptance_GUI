@@ -6,12 +6,12 @@ import java.util.Scanner;
 public class Facultate {
 protected String nume;
 private ArrayList <Specializare> specializari;
-private int nr_specializari;
+private int nrSpecializari;
 
 public Facultate(String nume) {
 	super();
 	this.nume = nume;
-	this.nr_specializari=0;
+	this.nrSpecializari=0;
 	this.specializari=new ArrayList<Specializare>();
 	
 	//this.nr_locuri_nativi = nr_locuri_nativi;
@@ -22,12 +22,12 @@ public String getNume() {
 	return nume;
 }
 
-public int getNr_specializari() {
-	return nr_specializari;
+public int getNrSpecializari() {
+	return nrSpecializari;
 }
 
-public void setNr_specializari(int nr_specializari) {
-	this.nr_specializari = nr_specializari;
+public void setNrSpecializari(int nrSpecializari) {
+	this.nrSpecializari = nrSpecializari;
 }
 
 public void setNume(String nume) {
@@ -42,19 +42,23 @@ public void setSpecializari(ArrayList<Specializare> specializari) {
 	this.specializari = specializari;
 }
 
-public void adaugare_specializare()
+public void adaugaSpecializare()
 {
 	Scanner scanner=new Scanner(System.in);
 	System.out.println("Denumirea specializarii:");
 	String spec=scanner.nextLine();
 	System.out.println("Numarul de locuri (romani)");
 	int nr=scanner.nextInt();
+	scanner.nextLine();
 	System.out.println("Numarul de locuri (straini)");
 	int nr2=scanner.nextInt();
-	System.out.println("Introduceti numarul de examene necesare pentru admitere: \n");
+	scanner.nextLine();
+	System.out.println("Introduceti numarul de examene necesare pentru admitere: ");
 	int nr3=scanner.nextInt();
-	System.out.println("Introduceti numarul de examene BAC luate in considerare pentru admitere: \n");
+	scanner.nextLine();
+	System.out.println("Introduceti numarul de examene BAC luate in considerare pentru admitere: ");
 	int nr4=scanner.nextInt();
+	scanner.nextLine();
 	Specializare specializare=new Specializare(this.nume,  spec, nr, nr2, nr3, nr4);
 	
 	this.specializari.add(specializare);
@@ -64,16 +68,43 @@ public void adaugare_specializare()
 	 //       scanner.close(); 
 }
 
-public void adaugare_specializari()
+public void adaugaSpecializari()
 {
 	Scanner scanner=new Scanner(System.in);
-	System.out.println("Introduceti numarul de specializari: \n");
+	System.out.println("Introduceti numarul de specializari: ");
 	int nr=scanner.nextInt();
+	scanner.nextLine();
 	int i;
 	for(i=0; i<nr; i++)
-		adaugare_specializare();
+		adaugaSpecializare();
 	 //if(scanner!=null)
 	  //      scanner.close(); 
 }
+/*
+@Override
+public String toString()
+{
+	int i, j;
+	Scanner scanner=new Scanner(System.in);
+	String answer="";
+	answer+="Denumire facultate: "+nume+"\n ";
+		
+	
+		for(j=0; j<specializari.size(); j++)
+		{
+		    specializari.get(i).toString();
+			switch(raspuns)
+			{
+			case "da":
+				afiseazaTotiCandidatiiSpecializare(facultati.get(i).getSpecializari().get(j));
+				break;
+			case "nu":
+				continue;
+			}
+		}
 
+
+
+}
+*/
 }
