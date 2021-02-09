@@ -4,3 +4,4 @@ This app has a very simple GUI made with Java AWT and Swing, that lets us work w
 be accepted to a specific university. We can enter new students, delete or update them with the help of a database. The same with new subjects/exams. 
 
 ![Screenshot](1.png)
+![Screenshot](2.png)
