@@ -4,99 +4,83 @@ import java.util.PriorityQueue;
 import java.util.Comparator;
 
 public class Specializare extends Facultate{
-private String numeSpec;
-private int nrLocuriNativi;
-private int nrLocuriStraini;
-private PriorityQueue <Nativ> candidatiRomani;
-private PriorityQueue <Strain> candidatiStraini;
-private int nrExameneAdm;
-private int nrExameneBAC;
+private String nume_spec;
+private int nr_locuri_nativi;
+private int nr_locuri_straini;
+private PriorityQueue <Nativ> candidati_romani;
+private PriorityQueue <Strain> candidati_straini;
+private int nr_examene_adm;
+private int nr_examene_BAC;
 
 
-public Specializare(String nume, String numeSpec, int nrLocuriNativi, int nrLocuriStraini, 
-		int nrExameneAdm, int nrExameneBAC) {
+public Specializare(String nume, String nume_spec, int nr_locuri_nativi, int nr_locuri_straini, 
+		int nr_examene_adm, int nr_examene_BAC) {
 	super(nume);
-	this.numeSpec = numeSpec;
-	this.nrLocuriNativi = nrLocuriNativi;
-	this.nrLocuriStraini = nrLocuriStraini;
-	PriorityQueue<Nativ> queue = new PriorityQueue<Nativ>(new TheComparator()); 
-	this.candidatiRomani=queue;
-	PriorityQueue<Strain> queue2 = new PriorityQueue<Strain>(new TheComparator()); 
-	this.candidatiStraini=queue2;
-	this.nrExameneAdm=nrExameneAdm;   //nr examene de admitere
-	this.nrExameneBAC=nrExameneBAC;
+	this.nume_spec = nume_spec;
+	this.nr_locuri_nativi = nr_locuri_nativi;
+	this.nr_locuri_straini = nr_locuri_straini;
+	PriorityQueue<Nativ> queue = new PriorityQueue<Nativ>(new The_Comparator()); 
+	this.candidati_romani=queue;
+	PriorityQueue<Strain> queue2 = new PriorityQueue<Strain>(new The_Comparator()); 
+	this.candidati_straini=queue2;
+	this.nr_examene_adm=nr_examene_adm;   //nr examene de admitere
+	this.nr_examene_BAC=nr_examene_BAC;
 }
 
-public int getNrExameneAdm() {
-	return nrExameneAdm;
+public int getNr_examene_adm() {
+	return nr_examene_adm;
 }
 
-public void setNrExameneAdm(int nrExamene) {
-	this.nrExameneAdm = nrExamene;
+public void setNr_examene_adm(int nr_examene) {
+	this.nr_examene_adm = nr_examene;
 }
 
-public int getNrExameneBAC() {
-	return nrExameneBAC;
+public int getNr_examene_BAC() {
+	return nr_examene_BAC;
 }
 
-public void setNrExameneBAC(int nrExameneBAC) {
-	this.nrExameneBAC = nrExameneBAC;
+public void setNr_examene_BAC(int nr_examene_BAC) {
+	this.nr_examene_BAC = nr_examene_BAC;
 }
 
-public String getNumeSpec() {
-	return numeSpec;
+public String getNume_spec() {
+	return nume_spec;
 }
 
-public void setNumeSpec(String numeSpec) {
-	this.numeSpec = numeSpec;
+public void setNume_spec(String nume_spec) {
+	this.nume_spec = nume_spec;
 }
 
-public int getNrLocuriNativi() {
-	return nrLocuriNativi;
+public int getNr_locuri_nativi() {
+	return nr_locuri_nativi;
 }
 
-public void setNrLocuriNativi(int nrLocuriNativi) {
-	this.nrLocuriNativi = nrLocuriNativi;
+public void setNr_locuri_nativi(int nr_locuri_nativi) {
+	this.nr_locuri_nativi = nr_locuri_nativi;
 }
 
-public int getNrLocuriStraini() {
-	return nrLocuriStraini;
+public int getNr_locuri_straini() {
+	return nr_locuri_straini;
 }
 
-public void setNrLocuriStraini(int nrLocuriStraini) {
-	this.nrLocuriStraini = nrLocuriStraini;
+public void setNr_locuri_straini(int nr_locuri_straini) {
+	this.nr_locuri_straini = nr_locuri_straini;
 }
 
-public PriorityQueue<Nativ> getCandidatiRomani() {
-	return candidatiRomani;
+public PriorityQueue<Nativ> getCandidati_romani() {
+	return candidati_romani;
 }
 
-public void setCandidatiRomani(PriorityQueue<Nativ> candidatiRomani) {
-	this.candidatiRomani = candidatiRomani;
+public void setCandidati_romani(PriorityQueue<Nativ> candidati_romani) {
+	this.candidati_romani = candidati_romani;
 }
 
-public PriorityQueue<Strain> getCandidatiStraini() {
-	return this.candidatiStraini;
+public PriorityQueue<Strain> getCandidati_straini() {
+	return this.candidati_straini;
 }
 
-public void setCandidatiStraini(PriorityQueue<Strain> candidatiStraini) {
-	this.candidatiStraini = candidatiStraini;
+public void setCandidati_straini(PriorityQueue<Strain> candidati_straini) {
+	this.candidati_straini = candidati_straini;
 }
-/*
-@Override
-public String toString()
-{
-	String answer="";
-	answer+="Denumire specializare: "+numeSpec+"\n";
-	System.out.println("Nr locuri studenti romani: ");
-	System.out.println(facultati.get(i).getSpecializari().get(j).getNrLocuriNativi());
-	System.out.println("Nr locuri studenti straini: ");
-	System.out.println(facultati.get(i).getSpecializari().get(j).getNrLocuriStraini());
-	
-	System.out.println("Vreti sa afisati si datele despre candidatii pentru aceasta "
-			+ "specializare (da/nu)? \n");
-	String raspuns=scanner.next();
-	scanner.nextLine();
-}
-*/
+
 }
